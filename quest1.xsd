@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+<!--xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"-->
+    <xs:element name="register">
+        <xs:complexType>
+           <xs:sequence>
+                <xs:element name="participant" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="firstName" type="xs:string"/>
+                            <xs:element name="lastName" type="xs:string"/>
+                            <xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="2"/>
+                            <xs:element name="payement">
+                              <xs:complexType>
+                                <xs:attribute name="paye">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                      <xs:enumeration value="yes"/>
+                                      <xs:enumeration value="no"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="device" >
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                      <xs:enumeration value="Dh"/>
+                                      <xs:enumeration value="Euro"/>
+                                      <xs:enumeration value="Dollar"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="montant" type="xs:decimal"/>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="affiliation">
+                              <xs:complexType>
+                                <xs:attribute name="city" type="xs:string"/>
+                                <xs:attribute name="country" type="xs:string"/>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="address" type="xs:string"/>
+                            <xs:element name="presentation" minOccurs="0" maxOccurs="1">
+                              <xs:complexType>
+                                <xs:attribute name="date" type="xs:date"/>
+                                <xs:attribute name="hour" type="xs:time"/>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="travel">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="arrival" >
+                                    <xs:complexType>
+                                      <xs:attribute name="date" type="xs:date"/>
+                                      <xs:attribute name="hour" type="xs:time"/>
+                                      <xs:attribute name="airport" type="xs:string"/>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="departure">
+                                    <xs:complexType>
+                                      <xs:attribute name="date" type="xs:date"/>
+                                      <xs:attribute name="hour" type="xs:time"/>
+                                      <xs:attribute name="airport" type="xs:string"/>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="paper">
+                              <xs:complexType>
+                                  <xs:sequence>
+                                  <xs:element name="author" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="affiliation" type="xs:string"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="title" type="xs:string"/>
+                                </xs:sequence>
+                                 <xs:attribute name="number" type="xs:positiveInteger"/>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="hotel">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="name" type="xs:string"/>
+                                  <xs:element name="address" type="xs:string"/>
+                                  <xs:element name="tel" type="xs:tel" minOccurs="0" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="socialEvent" >
+                              <xs:complexType>
+                                 <xs:sequence>
+                                  <xs:element name="payement">
+                                    <xs:complexType>
+                                      <xs:attribute name="device" >
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:token">
+                                            <xs:enumeration value="Dh"/>
+                                            <xs:enumeration value="Euro"/>
+                                            <xs:enumeration value="Dollar"/>
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:attribute>
+                                      <xs:attribute name="montant" type="xs:decimal"/>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="accopagned">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                        
+                                        <xs:element name="name" type="xs:string"/>
+                                      </xs:sequence>
+                                      <xs:attribute name="accopagned">
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:token">
+                                            <xs:enumeration value="yes"/>
+                                            <xs:enumeration value="no"/>
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:attribute>
+                                      <xs:attribute name="prentship" type="xs:string"/>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="participate">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                      <xs:enumeration value="yes"/>
+                                      <xs:enumeration value="no"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                              </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID"/>
+                        <xs:attribute name="sexe" type="xs:string"/>
+                        <xs:attribute name="withpaper">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:token">
+                                <xs:enumeration value="yes"/>
+                                <xs:enumeration value="no"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+

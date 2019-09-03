@@ -1,0 +1,66 @@
+# Titre du projet
+
+  Application de conférence 
+
+## Bien débuter
+
+  Cette application a pour objectif d'administrer une conférence, elle peut être destinée au client qui peut s'inscrire à la conférence et bien évidemment modifier ses informations déjà saisies, comme elle peut être destinée pour un administrateur qui s'occupe des participants inscrits à cette conférence . Dans ce cas il peut chercher un participant quelconque par son id et son émail, et faire quelque statistique sur le nombre de participant qui a une nationalité précise ou qui réside dans un hôtel présis. Il est possible d'extraire un reçu de payement, une attestation de participation et un badge .
+
+
+### Prérequis
+
+ Pour utiliser cette application sur Linux, il faut que l'utilisateur installe Apache, Php, un éditeur Latex pour qu'il peut afficher son badge et l'attestation de participation et un navigateur web .
+
+ Sous Linux :
+   # installation d'apaches :
+   Éxécutez les commandes suivantes sous la terminale en respectant l'ordre donné :
+      * sudo apt-get install mysql-server php5-mysql
+      * sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+      * sudo apt-get install phpmyadmin apache2-utils
+      Il vous sera demandé alors :
+            -de choisir votre serveur web. Sélectionnez Apache2.
+            -si vous voulez obtenir une configuration de base de Phpmyadmin (dbconfig-common). Acceptez.
+            -d’entrer votre mot de passe Root My Sql
+            -de spécifier un mot de passe Root pour vous connecter à Phpmyadmin. Mot de passe fort toujours recommandé.
+             Félicitations ! Vous avez installé Phpmyadmin. Mais ce n’est pas suffisant. En effet, Apache ne sait pas que vous avez opté pour l’utilisation de Phpmyadmin, et donc vous ne pouvez pas y accéder.
+             Rendez-vous dans les configurations d’Apache, situées dans :
+             /etc/apache2/apache2 .conf
+             Vous pouvez par exemple utiliser nano :
+             Sudo /etc/apache2/apache2 conf
+             Ajoutez-y à la fin :
+             /etc/phpmyadmin/apache conf
+             Et redémarrez apache: soudo service apache2 restarts .
+    # Installation de Tex Studio :
+       Pour installer ce logiciel, il suffit d'installer le paquet : https://doc Ubuntu-fr.Org/tutoriel/comment installer un paquet
+
+#### Accéder à notre documentation
+
+ Dans un premier temps il faut qu'apache soit démarré, et on lance la commande "Php -S local host :8000 index Php" sous terminale après avoir accédé au répertoire contenant le projet .
+ On lance dans le navigateur "local host" qui va afficher la page d'aigüe de l'application . Celle-ci contient un menu permettant de faire tous les traitements déjà citer .Pour s'inscrire il fait cliquer sur le boutton "Registration"
+ Le menu en haut permet de faire la recherche, la modification, la suppression et l'extraction des papiers administratifs.
+ La recherche : Pour chercher un participant par son id en clique sur "By id", en entrant l'id correspondant on lui affiche les
+                informations nécéssaires .
+                Pour chercher un participant par son nom il suffit de l'entrer dans l'input et il sera affiché tous donnés concernant ce participant .
+                Pour chercher les participants qui résident dans un hôtel précis on clique sur "By hôtel" ou ceux qui viennent d'un pays précis on clique sur "By affiliât".
+ La suppression : Se fait juste par l'administrateur, on clique sur "modification" puis "Suppression", elle s'effectue par la saisie de
+                 l'identifiant du participant.
+ La mise à jour : Celle-ci est possible en cliquant sur "modification" après "Update", elle permet la modification dans le fichier XML 
+                  qui contient tous les participants inscrits .
+ L'extraction : "Certificate of registration" permet d'extraire une attestation d'enregistrement d'un participant donné.
+                "Payement recepts" permet d'extraire les reçus de payement d'un participant donné.
+                "Participation badge" en donnant l'id du participant, on lui affiche le code latex du badge de participation.
+
+##### Vision sur le projet
+
+   Dans le dossier App-Conférence vous trouvrez le fichier "index.html" c'est notre page d'acceuil , le fichier "form1.xml" contient les participants inscrits , il n'est pas créer qu'après l'enregistrement du premier participant .
+
+###### Auteur  
+
+   Chamri Oumaima 
+
+
+
+
+
+
+  

@@ -1,0 +1,192 @@
+h2{
+color: #FFC03F;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;    
+}
+
+.error {color: RED;}
+label,input,select{
+    padding:5px;
+    margin:5px;
+    
+  }
+form{
+  width:600px;
+  margin:0 auto;
+  padding:10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+    border-color: #dedede;
+}
+p{
+  align-self: center;
+}
+.btn {
+    font-family: 'Yanone Kaffeesatz';
+    padding: 13px 16px 10px 16px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: darkorange;
+    border: none;
+    font-size: 18px;
+    text-align: center;       
+    color:#fff;
+    text-transform:uppercase;
+    margin: 40px;
+}
+.btnit {
+    font-family: 'Yanone Kaffeesatz';
+    padding: 13px 16px 10px 16px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position:relative;
+    text-decoration: none;
+    border-radius: 3px;
+    background:darkorange;
+    border: none;
+    font-size: 13px;
+    margin-left: 150px;
+    text-align: center;       
+    color:#fff;
+    text-transform:uppercase;
+}
+.reset{
+    cursor: pointer;
+    background-color: #34495E;
+}
+.send{
+    background-color: #66CC99;
+}
+.sendit{
+    background-color: #FFC03F;
+}
+/*.form-style-5{
+  padding: 10px 20px;
+  margin: 10px auto;
+  padding: 20px;
+  background: #f4f7f8;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}*/
+.form-style-5 fieldset{
+  border: none;
+}
+.form-style-5 legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.form-style-5 label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form-style-5 input[type="tel"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+.form-style-5 input[type="text"]{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+  background: #FFC03F;
+}
+.form-style-5 select{
+  -webkit-appearance: menulist-button;
+  height:35px;
+}
+.form-style-5 .number {
+  background: #1abc9c;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+.form-style-5 .num {
+  background: #ccc;
+  color: #1abc9c;
+  height: 29px;
+  width: 29px;
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: 4px;
+  line-height: 30px;
+  margin-left: 50px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+  background: #109177;
+}
+div{
+margin-left: 51px;
+}
+thead td {
+  margin-top: 4px;
+  padding: 4px 17px 4px 4px;
+  border-top:1px solid #ddd;
+}
+
+ 
